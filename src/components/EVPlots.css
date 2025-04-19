@@ -1,0 +1,229 @@
+
+   .dashboard {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff9daf4;
+    min-height: 100vh;
+  }
+   .dashboard-header {
+    background-color: #8e696c;
+    color:#fff9daf4;
+    padding: 1.5rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+    box-shadow: 0 2px 8px rgba(172, 137, 179, 0.15);
+  }
+  
+  .dashboard-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    
+  }
+  .dashboard .header-right{
+    text-align: right;
+  }
+.header-right select {
+   background-color: #f0f4f8;
+   color: #5b7180b6;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  /* Write-up Section */
+  .write-up {
+    margin: 20px;
+    padding: 15px;
+    background-color: #fff9daf4;
+    border-radius: 8px;
+  }
+  
+  .write-up h2 {
+    color:  #8e696c;
+    font-size: 1.5rem;
+  }
+  
+  .write-up p {
+    color: #dea1a2;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Chart Containers */
+  .dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .dashboard-plot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-align {
+    justify-content: flex-start;
+  }
+  
+  .right-align {
+    justify-content: flex-end;
+  }
+  
+  .dashboard-inner {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #fff9daf4;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  }
+  .dashboard-inner:hover {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    padding: 25px;
+    border-radius: 15px;
+     background-color: #fff5c5f4; /* subtle blue tint */
+  border-color: #d7c04df4;
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(170, 148, 7, 0.608);
+  }
+  
+  /* Individual Chart Wrapper */
+  .chart-wrapper {
+    flex: 1 1 300px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1)
+  }
+  
+  /* Top 10 EV Makes Special Layout */
+  .make-chart-container {
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .chart-hover-group {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Popup Styling */
+
+  
+  .left-popup-container {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    z-index: 10;
+    margin-right: 500px;
+    margin-top: 120px;
+
+  }
+  
+  .right-popup-container {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    z-index: 10;
+    margin-left: 500px;
+    margin-top: 200px;
+  }
+  
+  .popup-container {
+    position: absolute;
+    top: -20px;
+    left: -400px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+    width: 300px;
+    
+  }
+  .popup {
+    background-color: #8e696c;
+    color: #fff9daf4;
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    max-width: 300px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+  }
+  
+  
+  
+  .chart-hover-group:hover .popup-container {
+    display: flex;
+    
+  }
+  
+  .chart-hover-group:hover .popup {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Chart Titles */
+  .pie-chart-container,
+.bar-chart-container {
+  flex: 1 1 45%;
+  min-width: 300px;
+  background: #fff9daf4;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.pie-chart-container:hover,
+.bar-chart-container:hover {
+  transform: translateY(-5px);
+}
+
+  .pie-chart-container h3,
+  .bar-chart-container h3 {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #292c4cd4;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .make-chart-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .popup-container {
+      position: static;
+      display: flex;
+      margin-top: 20px;
+    }
+  }
+  /* Ensure all combo charts have consistent styling */
+.make-chart-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  /* Make sure popups are visible for all combo charts */
+  .chart-hover-group:hover .popup-container {
+    display: flex;
+  }
+  
+  /* Responsive adjustments for combo charts */
+ 
