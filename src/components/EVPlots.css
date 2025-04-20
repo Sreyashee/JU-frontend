@@ -309,8 +309,6 @@
     }
   }
   
-  
-  @media (max-width: 480px) {
     @media (max-width: 480px) {
         .dashboard {
           padding: 10px;
@@ -401,6 +399,25 @@
           flex-direction: column;
           align-items: center;
         }
+        .make-chart-container,
+  .chart-hover-group {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .pie-chart-container,
+  .bar-chart-container,
+  .chart-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  .popup-container {
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
       }
       
-  }
