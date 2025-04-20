@@ -186,6 +186,12 @@
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+
+    max-width: 100%;
+    height: auto;
+    display: block;
+  
+  
 }
 
 .pie-chart-container:hover,
@@ -247,39 +253,65 @@
   
   @media (max-width: 768px) {
     .dashboard-header {
-      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
     }
   
-    .dashboard-header h1 {
-      font-size: 1.8rem;
+    .header-right {
+      width: 100%;
+      margin-top: 10px;
     }
   
-    .make-chart-container {
+    .dashboard-container {
+      gap: 20px;
+    }
+  
+    .dashboard-inner {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .chart-hover-group {
       flex-direction: column;
       align-items: center;
     }
   
     .popup-container {
-      position: static;
+      position: static !important;
+      transform: none !important;
+      width: 100%;
       display: flex;
-      margin-top: 20px;
+      flex-direction: column;
+      margin: 10px 0 0 0;
     }
   
+    .popup {
+      width: 100%;
+      font-size: 0.85rem;
+    }
+  
+    .make-chart-container,
     .pie-chart-container,
     .bar-chart-container {
+      width: 100%;
+      min-width: unset;
       flex: 1 1 100%;
-      margin-bottom: 15px;
     }
   
-    .write-up {
-      margin: 10px;
-      padding: 10px;
+    .left-popup-container,
+    .right-popup-container {
+      position: static;
+      margin: 0;
+      transform: none;
     }
-    
-    .chart-wrapper {
-      flex: 1 1 100%;
+  
+    .dashboard-plot {
+      flex-direction: column;
+      align-items: center;
     }
   }
+  
   
   @media (max-width: 480px) {
     .dashboard-header {
