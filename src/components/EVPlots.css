@@ -306,4 +306,65 @@
     .popup-container {
       width: 200px;
     }
+ 
+        .dashboard-header {
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+        }
+      
+        .header-right {
+          width: 100%;
+          margin-top: 10px;
+        }
+      
+        .dashboard-container {
+          gap: 20px;
+        }
+      
+        .dashboard-inner {
+          width: 95%;
+          padding: 15px;
+        }
+      
+        .chart-hover-group {
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .popup-container {
+          position: static !important;
+          transform: none !important;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin: 10px 0 0 0;
+        }
+      
+        .popup {
+          width: 100%;
+          font-size: 0.85rem;
+        }
+      
+        .make-chart-container,
+        .pie-chart-container,
+        .bar-chart-container {
+          width: 100%;
+          min-width: unset;
+          flex: 1 1 100%;
+        }
+      
+        .left-popup-container,
+        .right-popup-container {
+          position: static;
+          margin: 0;
+          transform: none;
+        }
+      
+        .dashboard-plot {
+          flex-direction: column;
+          align-items: center;
+        }
+      
+      
   }
