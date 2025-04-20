@@ -202,7 +202,58 @@
   }
   
   /* Responsive */
+  @media (max-width: 1200px) {
+    .dashboard-container {
+      gap: 20px;
+    }
+  
+    .make-chart-container {
+      gap: 30px;
+      justify-content: center;
+    }
+  
+    .pie-chart-container,
+    .bar-chart-container {
+      flex: 1 1 100%;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .dashboard-header h1 {
+      font-size: 2rem;
+    }
+  
+    .write-up h2 {
+      font-size: 1.3rem;
+    }
+  
+    .write-up p {
+      font-size: 0.9rem;
+    }
+  
+    .chart-wrapper {
+      flex: 1 1 45%;
+    }
+  
+    .popup-container {
+      width: 250px;
+    }
+  
+    .dashboard-inner {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  
   @media (max-width: 768px) {
+    .dashboard-header {
+      padding: 1rem;
+    }
+  
+    .dashboard-header h1 {
+      font-size: 1.8rem;
+    }
+  
     .make-chart-container {
       flex-direction: column;
       align-items: center;
@@ -213,17 +264,46 @@
       display: flex;
       margin-top: 20px;
     }
-  }
-  /* Ensure all combo charts have consistent styling */
-.make-chart-container {
-    width: 100%;
-    margin-bottom: 30px;
+  
+    .pie-chart-container,
+    .bar-chart-container {
+      flex: 1 1 100%;
+      margin-bottom: 15px;
+    }
+  
+    .write-up {
+      margin: 10px;
+      padding: 10px;
+    }
+    
+    .chart-wrapper {
+      flex: 1 1 100%;
+    }
   }
   
-  /* Make sure popups are visible for all combo charts */
-  .chart-hover-group:hover .popup-container {
-    display: flex;
-  }
+  @media (max-width: 480px) {
+    .dashboard-header {
+      text-align: center;
+      padding: 0.8rem;
+    }
   
-  /* Responsive adjustments for combo charts */
- 
+    .dashboard-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .header-right select {
+      font-size: 14px;
+    }
+  
+    .write-up h2 {
+      font-size: 1.2rem;
+    }
+  
+    .write-up p {
+      font-size: 0.85rem;
+    }
+  
+    .popup-container {
+      width: 200px;
+    }
+  }
