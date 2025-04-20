@@ -19,10 +19,12 @@ import {
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#845EC2', '#D65DB1', '#FF6F91', '#FFC75F', '#F9F871', '#2C73D2'];
 
 const EVPlots = () => {
+    const API_BASE = process.env.REACT_APP_API_URL;
+    ;
   const [plots, setPlots] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/api/plots')
+    fetch('https://ju-9huo.onrender.com/api/plots')
       .then(response => response.json())
       .then(data => setPlots(data))
       .catch(error => console.error('Error fetching data:', error));
